@@ -2,7 +2,7 @@ Options -MultiViews
 RewriteEngine On
 
 
-RewriteBase /mvc/public/
+RewriteBase /phpmvc/public/
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
