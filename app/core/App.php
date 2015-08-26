@@ -24,6 +24,9 @@ class App
 			if (method_exists($this->controller, $url[1])) {
 				$this->method = $url[1];
 				unset($url[1]);
+			} else {
+				echo "Page not found.";
+				die();
 			}
 		}
 
