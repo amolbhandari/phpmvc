@@ -2,7 +2,7 @@
 /**
 * 
 */
-class User
+class UserModel
 {
 	private $name;
 
