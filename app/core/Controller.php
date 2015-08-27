@@ -23,4 +23,13 @@ class Controller
 			}
 		}
 	}
+
+	protected function view($view, $data = []) {
+		if (file_exists('../app/views/' . get_class($this) . '/' . $view . '.php')) {
+			require_once '../app/views/' . get_class($this) . '/' . $view . '.php';
+		} else {
+			echo $view." view does not exist, please create file ".get_class($this)."/".$view.".php in views folder.";
+			die();
+		}
+	}
 }

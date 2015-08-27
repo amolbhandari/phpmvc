@@ -11,9 +11,8 @@ class Home extends Controller
 	
 	public function index($name = '') {
 		$this->model->User->setName("Prajyot");
-		echo $this->model->User->getName();
 		$this->model->Location->setState("Goa");
-		echo ", ".$this->model->Location->getState();
+		$this->view('index', ['name' => $this->model->User->getName()]);
 	}
 
 }
