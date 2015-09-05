@@ -1,5 +1,11 @@
 {
 	"require": {
-		"phpunit/phpunit": "4.8.6"
+		"phpunit/phpunit": "4.8.6",
+		"illuminate/database": "5.1.16"
+	},
+	"autoload": {
+		"classmap": [
+			"app/models"
+		]
 	}
 }
