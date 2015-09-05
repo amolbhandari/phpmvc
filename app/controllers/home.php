@@ -19,4 +19,12 @@ class Home extends Controller
 			'message' => 'We have users controller too.']);
 	}
 
+	public function create($name = '', $email = '', $phone = '') {
+
+		$this->model->User->addRecord(array(
+			'name' => $name,
+			'email' => $email,
+			'phone' => $phone
+			));
+	}
 }

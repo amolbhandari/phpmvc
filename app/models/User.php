@@ -1,9 +1,13 @@
 <?php
+use Illuminate\Database\Eloquent\Model as Eloquent;
 /**
 * 
 */
-class UserModel
+class UserModel extends Eloquent
 {
+	protected $table = 'users';
+	protected $fillable = array('name', 'email', 'phone');
+
 	private $name;
 
 	public function setName($name) {
@@ -12,5 +16,9 @@ class UserModel
 
 	public function getName() {
 		return $this->name;
+	}
+
+	public function addRecord($data) {
+		$this->create($data);
 	}
 }
