@@ -1,6 +1,6 @@
 <?php
 /**
-* 
+* User Controller
 */
 class User extends Controller
 {
